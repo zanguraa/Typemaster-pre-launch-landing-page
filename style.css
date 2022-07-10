@@ -122,10 +122,44 @@ h1 {
     flex-wrap: wrap;
 }
 
+.keyboard-orange-container {
+    position: relative;
+    top: 0px;
+    width: 120px;
+    height: 100%;
+    left: -14px;
+    background: #F16718;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.keyboard-orange {
+    width: 120px;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+}
+
+.keyboard-orange-tablet {
+    display: none;
+}
+
+.keyboard-orange-desktop {
+    display: none;
+}
+
 .mobile-glass {
     width: 220px;
     height: 193px;
     border-radius: 20px;
+}
+
+.tablet-glass {
+    display: none;
+}
+
+.dekstop-glass {
+    display: none;
 }
 
 .mechanical-container {
@@ -218,14 +252,109 @@ footer span {
 
 @media screen and (min-width: 768px){
 
+    body {
+        width: 100%;
+        background-color: #fafafa;
+        background-image: url(./assets/mobile/keyboard-border-radius.png);
+        background-repeat: no-repeat;
+        background-position: top 180px right -11px;
+        background-size: 371px 331px;
+    }
+
+    header {
+        margin: 27px 24px 94px 39px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-h1-container {
+        margin: 24px 39px;
+        display: flex;
+        width: 326px;
+        height: 316px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .mobile-glass {
+        display: none;
+        width: 220px;
+        height: 193px;
+        border-radius: 20px;
+    }
+    
+    .tablet-glass {
+        display: block;
+        position: relative;
+        width: 445px;
+        height: 320px;
+        top: 0px;
+        right: -48px;
+        border-radius: 20px;
+    }
+
+    .dekstop-glass {
+        display: none;
+    }
 
     .mechanical-container {
         padding: 14px;
         display: flex;
         text-align: center;
-        width: 689px;
+        width: 700px;
         align-items: center;
     }
+
+    .mechanical-container span {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: left;
+        color: #7B8BAD;
+        margin-left: 57px;
+        }
+
+    .keyboard-orange {
+        display: none;
+        width: 120px;
+        height: 100%;
+        border-radius: 0px 20px 20px 0px;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+    }
+
+    .keyboard-orange-desktop {
+        display: none;
+    }
+
+    .keyboard-orange-container {
+        position: relative;
+        top: 0px;
+        left: 32px;
+        width: 214px;
+        background: #F16718;
+        border-radius: 20px;
+    }
+
+    .keyboard-orange-tablet {
+        display: block;
+        width: 214px;
+        height: 320px;
+        border-radius: 20px;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+    }
+
+    /* .mechanical-container {
+        padding: 14px;
+        display: flex;
+        text-align: center;
+        width: 689px;
+        align-items: center;
+    } */
 
     h2 {
         font-family: 'Barlow';
@@ -309,4 +438,194 @@ footer span {
         margin-right: 10px;
     }
     
+}
+
+@media screen and (min-width: 1440px) {
+
+    body {
+        width: 100%;
+        background-color: #fafafa;
+        background-image: url(./assets/desktop/desktop-keyb.png), url(./assets/desktop/dekstop-square.png);
+        background-repeat: no-repeat, no-repeat;
+        background-position: top 189px right 146px, top 189px right -137px;
+        background-size: 560px 480px, 255px 240px;
+    }
+
+    header {
+        margin: 27px 24px 94px 39px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 165px;
+    }
+
+    .first-section {
+        height: 381px;
+        padding: 30px 165px;
+    }
+
+    .main-h1-container {
+        margin: 0px;
+        display: flex;
+        width: 326px;
+        height: 316px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .second-section {
+        display: flex;
+        column-gap: 62px;
+        flex-wrap: wrap;
+        padding: 30px 165px;
+        background-image: url(./assets/desktop/desktop-left-square.png);
+        background-repeat: no-repeat;
+        background-position: top 284px left -119px;
+        background-size: 250px 230px;
+    }
+
+    .mobile-glass {
+        display: none;
+        width: 220px;
+        height: 193px;
+        border-radius: 20px;
+    }
+    
+    .tablet-glass {
+        display: none;
+    }
+    
+    .dekstop-glass {
+        display: block;
+        width: 445px;
+        height: 480px;
+        border-radius: 20px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 28px;
+        row-gap: 7px;
+        padding: 30px 165px;
+    }
+
+    .card {
+        display: flex;
+        flex-basis: 20%;
+        width: 255px;
+        height: 323px;
+        text-align: left;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 56px;
+        line-height: 56px;
+        text-transform: uppercase;
+        color: #162542;
+    }
+
+    .main-h1-container span {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: #7B8BAD;
+    }
+
+    .button-2:hover {
+        background: #FF9B62;
+    }
+
+    .pre-order-button:hover {
+        background: #162542;
+        color:  #FFFFFF;
+    }
+
+    .keyboard-orange-container {
+        position: relative;
+        top: 0px;
+        width: 255px;
+        height: 480px;
+        left: 0;
+        background: #F16718;
+        border-radius: 20px;
+    }
+
+    .keyboard-orange {
+        display: none;
+        width: 120px;
+        height: 100%;
+        border-radius: 0px 20px 20px 0px;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+    }
+    
+    .keyboard-orange-tablet {
+        display: none;
+    }
+
+    
+    
+    .keyboard-orange-desktop {
+        display: block;
+        width: 255px;
+        height: 480px;
+        border-radius: 0px 20px 20px 0px;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+    }
+
+    .mechanical-container {
+        padding: 14px;
+        display: flex;
+        text-align: center;
+        width: 255px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    h2 {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 36px;
+        text-align: left;
+        text-transform: uppercase;
+        color: #162542;
+        padding: 0;
+    }
+
+    .mechanical-container span {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: left;
+        color: #7B8BAD;
+        margin-left: 0;
+    }
+    .card span {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 500;
+        width: 255px;
+        font-size: 16px;
+        line-height: 26px;
+        /* text-align: center; */
+        color: #7B8BAD;
+        text-align: left;
+    }
+
 }
